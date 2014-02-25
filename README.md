@@ -62,7 +62,10 @@ angular
 <div>
 
 	<div ng-repeat="car in cars">
-		<toptrump data="car" fields="toptrump_fields" name="name" image="image" />
+		<toptrump data="car" fields="toptrump_fields">
+      <h3>{{ car.name }}</h3>
+      <div><img ng-src="{{ car.image }}" /></div>
+    </toptrump>
 	</div>
 
 </div>
@@ -74,8 +77,8 @@ this directive takes the following scope:
 
  * data:'=' - the object to render in the card
  * fields:'=' - the array of fields to display
- * name:'@' - the field for the card name
- * image:'@' - the field for the card image
+
+the content in the directive is transcluded onto the top-trump card
 
 ## license
 

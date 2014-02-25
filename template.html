@@ -1,14 +1,10 @@
 <div class="toptrump-card">
-    <div class="toptrump-name">{{ getname() }}</div>
-    <div class="toptrump-image" ng-if="getimage()">
-        <img ng-src="getimage()" style="width:100%;" />
-    </div>
-    <div>
-        <table border=0 class="toptrump-table">
-            <tr ng-repeat="field in fields">
-                <td>{{ field.title }}:</td>
-                <td>{{ getvalue(field) }}</td>
-            </tr>
-        </table>
-    </div>
+    <div style="margin:5px;" ng-transclude></div>
+    <table border=0 class="toptrump-table">
+        <tr ng-repeat="field in fields">
+            <td align="left" valign="top" class="toptrump-td"><strong>{{ field.title }}:</strong></td>
+            <td>&nbsp;</td>
+            <td align="left" valign="top" class="toptrump-td">{{ getvalue(field) }}</td>
+        </tr>
+    </table>
 </div>

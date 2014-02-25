@@ -16,8 +16,10 @@ angular
         image:'@'
       },
       template: require('./template'),
+      transclude: true,
       replace: true,
       link:function($scope){
+
         $scope.getimage = function(){
           if($scope.data && $scope.data[$scope.image]){
             return $scope.data[$scope.image];
